@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Exemple avec une gestion de clients, commandes et produits pour l'exercice 2 de XML-01-E01-->
+<entreprise><script/>
+	<clients>
+		<client>
+			<numeroClient>124428</numeroClient>
+			<nom>Dupond</nom>
+			<prenom>Charles</prenom>
+			<remarque>Client particulier</remarque>
+			<adresses>
+				<adresse type="livraison">
+					<rue>Rue de la Gare</rue>
+					<numero>128</numero>
+					<npa>2000</npa>
+					<ville>Neuchâtel</ville>
+				</adresse>
+				<adresse type="facturation">
+					<rue>Grand Rue</rue>
+					<numero>14</numero>
+					<npa>2114</npa>
+					<ville>Fleurier</ville>
+				</adresse>
+			</adresses>
+			<commandes>
+				<commande>
+					<numero>2</numero>
+					<dateCommande>2021-02-21</dateCommande>
+					<montantTotal>195.00</montantTotal>
+					<lignes>
+						<ligne>
+							<numeroReference>1</numeroReference>
+							<quantite>100</quantite>
+							<ligneProd>284551</ligneProd>
+						</ligne>
+						<ligne>
+							<numeroReference>2</numeroReference>
+							<quantite>10</quantite>
+							<ligneProd>384551</ligneProd>
+						</ligne>
+					</lignes>
+				</commande>
+			</commandes>
+		</client>
+		<client>
+			<numeroClient>334424</numeroClient>
+			<nom>Jaccard</nom>
+			<prenom>Annette</prenom>
+			<remarque>Client commercial</remarque>
+			<adresses>
+				<adresse type="livraison">
+					<rue>Rue de la Fontaine</rue>
+					<numero>18</numero>
+					<npa>2108</npa>
+					<ville>Couvet</ville>
+				</adresse>
+				<adresse type="facturation">
+					<rue>Rue des Moulins</rue>
+					<numero>24</numero>
+					<npa>2000</npa>
+					<ville>Neuchâtel</ville>
+				</adresse>
+			</adresses>
+			<commandes>
+				<commande>
+					<numero>1</numero>
+					<dateCommande>2021-02-19</dateCommande>
+					<montantTotal>900.00</montantTotal>
+					<lignes>
+						<ligne>
+							<numeroReference>1</numeroReference>
+							<quantite>100</quantite>
+							<ligneProd>384331</ligneProd>
+						</ligne>
+						<ligne>
+							<numeroReference>1</numeroReference>
+							<quantite>10</quantite>
+							<ligneProd>384332</ligneProd>
+						</ligne>
+					</lignes>
+				</commande>
+			</commandes>
+		</client>
+	</clients>
+	<produits>
+		<produit typeProduit="Nettoyage">
+			<numeroProduit>284551</numeroProduit>
+			<nomProduit>Sipuro</nomProduit>
+			<prixUnitaire>1.50</prixUnitaire>
+		</produit>
+		<produit typeProduit="Alimentaire">
+			<numeroProduit>384551</numeroProduit>
+			<nomProduit>Riz</nomProduit>
+			<prixUnitaire>4.50</prixUnitaire>
+		</produit>
+		<produit typeProduit="Bureau">
+			<numeroProduit>384331</numeroProduit>
+			<nomProduit>Papier A4 bloc 500</nomProduit>
+			<prixUnitaire>7.50</prixUnitaire>
+		</produit>
+		<produit typeProduit="Bureau">
+			<numeroProduit>384332</numeroProduit>
+			<nomProduit>Paquet de 20 stylos</nomProduit>
+			<prixUnitaire>15.00</prixUnitaire>
+		</produit>
+	</produits>
+</entreprise>
