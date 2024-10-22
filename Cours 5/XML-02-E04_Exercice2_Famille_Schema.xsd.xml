@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Exemple de schéma pour l'exemple 1 avec l'arbre généaloqiue pour l'exercice 2 de XML-02-E04 et commentaires du choix des types en classe.-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"><script/>
+	<!-- Création d'un type age afin de saisir des âges humains corrects -->
+<!--	<xsd:simpleType name="typeAge">
+		<xsd:restriction base="xsd:short">
+			<xsd:minInclusive value="0"/>
+			<xsd:maxInclusive value="125"/>
+		</xsd:restriction>
+	</xsd:simpleType>-->
+<!--Créer la même contrainte avec un pattern pour l'âge entre 0 et 125-->
+	<xsd:simpleType name="typeAge">
+		<xsd:restriction base="xsd:short">
+			<xsd:pattern value="([0-9][0-9]?|((1[0-1][0-9])|(12[0-5])))?"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- Création d'un type niveau où on peut aller jusqu'à 6 génération de famille-->
+<!--	<xsd:simpleType name="typeNiveau">
+		<xsd:restriction base="xsd:short">
+			<xsd:minInclusive value="1"/>
+			<xsd:maxInclusive value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>-->
+<!--Créer la même contrainte avec un pattern pour le niveau entre 1 et 6-->
+	<xsd:simpleType name="typeNiveau">
+		<xsd:restriction base="xsd:short">
+			<xsd:pattern value="[1-6]"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:element name="nom" type="xsd:token"/>
+	<xsd:element name="prenom" type="xsd:token"/>
+	<xsd:element name="age" type="typeAge"/>
+	<xsd:attribute name="niveau" type="typeNiveau"/>
+
+	<xsd:element name="personne">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="nom"/>
+				<xsd:element ref="prenom"/>
+				<xsd:element ref="age"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="enfant">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="personne"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="descendants">
+		<xsd:complexType>
+			<xsd:choice>
+				<xsd:element ref="parents" maxOccurs="unbounded"/>
+				<xsd:element ref="enfant" maxOccurs="unbounded"/>
+			</xsd:choice>
+			<xsd:attribute ref="niveau" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="parents">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="personne" maxOccurs="unbounded"/>
+				<xsd:element ref="descendants"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="grandParent">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="personne" maxOccurs="unbounded"/>
+				<xsd:element ref="descendants"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="famille">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="grandParent"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
