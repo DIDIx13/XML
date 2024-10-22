@@ -1,0 +1,58 @@
+<!--
+Exemple de document xml contenant des données pour l'exercice 1 de XML-02-E03
+-->
+<Serie0203 xsi:noNamespaceSchemaLocation="XML-02-E03_Exercice1_Exemple_Schema.xsd">
+    <!-- 1. un entier entre 1 et 10 -->
+    <question1>1</question1>
+    <!--
+2. Un texte sans espaces comportant exactement 16 caractères
+-->
+    <question2>abcd1234efgh5678</question2>
+    <!--
+3. Un texte quelconque comportant au plus 32 caractères.
+-->
+    <question3>Aujourd'hui, il faut beau</question3>
+    <question3a>	Aujourd'hui, il faut beau </question3a>
+    <question3b>	Aujourd'hui, il faut beau </question3b>
+    <question3c>	Aujourd'hui, il faut beau </question3c>
+    <!--
+4. Un texte quelconque qui préserve les espaces multiples mais pas les sauts de ligne
+-->
+    <question4>le beau temps</question4>
+    <!--
+5. Un nombre entier entre -100 et 1000   [-100  - 1000[
+-->
+    <question5>-100</question5>
+    <!--6. Un nombre réel strictement supérieur à 10-->
+    <question6>10.1</question6>
+    <!--
+7. Un nombre entier qui peut prendre les valeurs 1,5,16,21 ou 34
+-->
+    <question7>21</question7>
+    <!--
+8. Un nombre entier entre 10 et 20 ou entre 40 et 50 [10 - 20] [40 - 50]
+-->
+    <question8>10</question8>
+    <!--9. Un nombre réel avec 5 chiffres après la virgule-->
+    <question9>1.12345</question9>
+    <!--
+10. Un numéro de série de la forme c-cc-ccc-cccc   (c = caractère)
+-->
+    <question10>a-22-333-4444</question10>
+    <!--
+11. Un nombre entier comportant le signe et 4 chiffres
+-->
+    <question11>+1234</question11>
+    <!--
+12. Un texte parmi les possibilités suivantes : Petit   Moyen  Grand
+-->
+    <question12>Petit</question12>
+    <!--
+13. Un texte entre 5 et 9 caractères composé uniquement de voyelles
+-->
+    <question13>aeiou</question13>
+    <!--
+14.	Une donnée pouvant être soit une date, soit un texte
+-->
+    <question14>2021-03-21</question14>
+</Serie0203>

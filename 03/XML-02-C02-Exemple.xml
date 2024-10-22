@@ -1,0 +1,47 @@
+<!--
+ Edité avec XMLSpy v2020 rel. 2 sp1 (x64) (http://www.altova.com) par HE-Arc (Haute Ecole Arc) 
+-->
+<!--
+Exemple de document XML contenant des données pour la gestion de joueurs et joueuses de football
+-->
+<football xsi:noNamespaceSchemaLocation="XML-02-C02-Exemple_Schema.xsd">
+    <joueur idJoueur="J1" sexe="masculin">
+        <nom>Robert</nom>
+        <prenom>Gilles</prenom>
+        <date_naissance>1995-08-08</date_naissance>
+        <telephone>0796124538</telephone>
+        <email>Gilles.Robert@gmail.com</email>
+        <posteJoueur>attaquant</posteJoueur>
+        <marie>true</marie>
+    </joueur>
+    <joueur idJoueur="J2" sexe="féminin">
+        <nom>Wuetrich</nom>
+        <prenom>Vanessa</prenom>
+        <date_naissance>2000-06-28</date_naissance>
+        <telephone>0762615433</telephone>
+        <email>vanessa.wuetrich@bluewin.ch</email>
+        <posteJoueur>milieu offensif</posteJoueur>
+        <marie>false</marie>
+    </joueur>
+    <joueur idJoueur="J3" sexe="masculin">
+        <nom>Cuche</nom>
+        <prenom>Jules</prenom>
+        <date_naissance>1998-05-20</date_naissance>
+        <telephone>0771262899</telephone>
+        <email>JCuche@gmail.com</email>
+        <posteJoueur>gardien</posteJoueur>
+        <marie>false</marie>
+        <remarque>
+Jules a subi une opération de genou gauche. Jules est allergique au gluten
+        </remarque>
+    </joueur>
+    <joueur idJoueur="J4" sexe="féminin">
+        <nom>Dumont</nom>
+        <prenom>Julie</prenom>
+        <date_naissance>1995-04-20</date_naissance>
+        <telephone>0783219876</telephone>
+        <email>JD1995@gmail.com</email>
+        <posteJoueur>arrière latéral</posteJoueur>
+        <marie>true</marie>
+    </joueur>
+</football>

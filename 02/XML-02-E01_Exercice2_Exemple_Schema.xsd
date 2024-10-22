@@ -1,0 +1,118 @@
+<!--
+Exemple de schéma pour l'exemple 1 avec client pour l'exercice 2 de XML-02-E01
+-->
+<xsd:schema>
+    <xsd:element name="numeroClient" type="xsd:string"/>
+    <xsd:element name="nom" type="xsd:string"/>
+    <xsd:element name="prenom" type="xsd:string"/>
+    <xsd:element name="remarque" type="xsd:string"/>
+    <xsd:element name="rue" type="xsd:string"/>
+    <xsd:element name="numero" type="xsd:string"/>
+    <xsd:element name="npa" type="xsd:string"/>
+    <xsd:element name="ville" type="xsd:string"/>
+    <xsd:attribute name="type" type="xsd:string"/>
+    <xsd:element name="dateCommande" type="xsd:string"/>
+    <xsd:element name="montantTotal" type="xsd:string"/>
+    <xsd:element name="numeroReference" type="xsd:string"/>
+    <xsd:element name="quantite" type="xsd:string"/>
+    <xsd:element name="ligneProd" type="xsd:string"/>
+    <xsd:element name="numeroProduit" type="xsd:string"/>
+    <xsd:element name="nomProduit" type="xsd:string"/>
+    <xsd:element name="prixUnitaire" type="xsd:string"/>
+    <xsd:attribute name="typeProduit" type="xsd:string"/>
+    <xsd:element name="adresse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="rue"/>
+                <xsd:element ref="numero"/>
+                <xsd:element ref="npa"/>
+                <xsd:element ref="ville"/>
+            </xsd:sequence>
+            <xsd:attribute ref="type" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="ligne">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="numeroReference"/>
+                <xsd:element ref="quantite"/>
+                <xsd:element ref="ligneProd"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="lignes">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="ligne" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="commande">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="numero"/>
+                <xsd:element ref="dateCommande"/>
+                <xsd:element ref="montantTotal"/>
+                <xsd:element ref="lignes"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="adresses">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="adresse" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="commandes">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="commande"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="client">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="numeroClient"/>
+                <xsd:element ref="nom"/>
+                <xsd:element ref="prenom"/>
+                <xsd:element ref="remarque"/>
+                <xsd:element ref="adresses"/>
+                <xsd:element ref="commandes"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="clients">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="client" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="entreprise">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="clients"/>
+                <xsd:element ref="produits"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="produit">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="numeroProduit"/>
+                <xsd:element ref="nomProduit"/>
+                <xsd:element ref="prixUnitaire"/>
+            </xsd:sequence>
+            <xsd:attribute ref="typeProduit" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="produits">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="produit" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
