@@ -4,8 +4,8 @@
 
 <!--Création des types simples personnalités-->
 
-	<!-- 1. Créationd d'un type tyoeNomPre afin de pouvoir saisir un nom et prénom d'une longueur de 30 caractères-->
-	<xsd:simpleType name="tyoeNomPre">
+	<!-- 1. Création d'un type typeNomPre afin de pouvoir saisir un nom et prénom d'une longueur de 30 caractères-->
+	<xsd:simpleType name="typeNomPre">
 		<xsd:restriction base="xsd:token">
 			<xsd:minLength value="1"/>
 			<xsd:maxLength value="30"/>
@@ -20,7 +20,8 @@
 		</xsd:restriction>
 	</xsd:simpleType>
 
-	<!-- 3. Création d'un type de produits permettant de choisir le genre de produits-->	<xsd:simpleType name="typeProduit">
+	<!-- 3. Création d'un type de produits permettant de choisir le genre de produits-->	
+	<xsd:simpleType name="typeProduit">
 		<xsd:restriction base="xsd:NMTOKEN">
 			<xsd:enumeration value="Bureau"/>
 			<xsd:enumeration value="Alimentaire"/>
@@ -28,7 +29,7 @@
 		</xsd:restriction>
 	</xsd:simpleType>
 
-	<!-- 4. Créationd d'un type tyoeMontant afin de pouvoir saisir des montants avec deux décimales-->
+	<!-- 4. Création d'un type tyoeMontant afin de pouvoir saisir des montants avec deux décimales-->
 	<xsd:simpleType name="typeMontant">
 		<xsd:restriction base="xsd:decimal">
 			<xsd:fractionDigits value="2"/>
@@ -57,7 +58,7 @@
 		</xsd:restriction>
 	</xsd:simpleType>
 
-	<!-- 8. Création d'un type npa pour la suisste-->
+	<!-- 8. Création d'un type npa pour la Suisse-->
 	<xsd:simpleType name="typeNpa">
 		<xsd:restriction base="xsd:short">
 			<xsd:minInclusive value="1000"/>
@@ -89,7 +90,7 @@
 		</xsd:restriction>
 	</xsd:simpleType>
 
-	<!-- 12. Créationd d'un type tyoeNomProd afin de pouvoir saisir des nom de produit de 50 caractères au maximum-->
+	<!-- 12. Création d'un type typeNomProd afin de pouvoir saisir des nom de produit de 50 caractères au maximum-->
 	<xsd:simpleType name="typeNomProd">
 		<xsd:restriction base="xsd:token">
 			<xsd:minLength value="1"/>
