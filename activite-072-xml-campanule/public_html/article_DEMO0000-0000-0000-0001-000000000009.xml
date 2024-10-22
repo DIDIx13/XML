@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    dominique huguenin (dominique.huguenin@rpn.ch)
+-->
+<?xml-stylesheet type="text/xsl" href= "campanule.xsl" ?>
+<article
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="campanule.xsd">
+    <identifiant>
+        <uuid>DEMO0000-0000-0000-0001-000000000009</uuid>
+        <version>0</version>
+    </identifiant>
+    <mouchard>
+        <dateCreation>2017-11-30T08:19:48.743Z</dateCreation>
+        <userCreation>testUser</userCreation>
+    </mouchard>
+    <nom>PESE-LETTRE1-1000</nom>
+    <qteStock>2</qteStock>
+    <prixAchat>150.00</prixAchat>
+    <prixVente>250.00</prixVente>
+</article>

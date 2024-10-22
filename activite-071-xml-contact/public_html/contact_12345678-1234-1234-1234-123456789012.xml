@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    dominique huguenin (dominique.huguenin@rpn.ch)
+-->
+<?xml-stylesheet type="text/xsl" href= "contacts.xsl" ?>
+<contact
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="contacts.xsd">
+    <identifiant>
+        <UUID>12345678-1234-1234-1234-123456789012</UUID>
+    </identifiant>
+    <nom>pier</nom>
+    <date-naissance>1990-11-29T00:00:00</date-naissance>
+    <telephones>
+        <telephone>
+            <numRef>1</numRef>
+            <categorie>PRIVE</categorie>
+            <numero>+41 32 123 45 67</numero>
+        </telephone>
+        <telephone>
+            <numRef>2</numRef>
+            <categorie>PROFESSIONNEL</categorie>
+            <numero>+41 12 345 67 89</numero>
+        </telephone>
+    </telephones>
+    <adresses>
+        <adresse>
+            <numRef>1</numRef>
+            <rue>rue de pier 1</rue>
+            <localite>ville 1 de pier</localite>
+        </adresse>
+        <adresse>
+            <numRef>2</numRef>
+            <rue>rue de pier 2</rue>
+            <localite>ville 2 de pier</localite>
+        </adresse>
+    </adresses>    
+    
+</contact>

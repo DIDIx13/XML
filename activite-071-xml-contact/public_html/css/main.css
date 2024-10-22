@@ -1,0 +1,21 @@
+/*
+ * dominique huguenin (dominique.huguenin@rpn.ch)
+ */
+
+@import "normalize.css";
+
+body {
+    margin: 1%;
+}
+
+table {
+    border-width: 1px;
+    border-style: solid;
+    margin: 5px 5px 5px 5px;
+}
+
+td, th {
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px 5px 5px 5px;
+}

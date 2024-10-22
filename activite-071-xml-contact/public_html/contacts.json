@@ -1,0 +1,67 @@
+[
+    {
+        "identifiant": {
+            "UUID": "12345678-1234-1234-1234-123456789012"
+        },
+        "nom": "pier",
+        "dateNaissance": "1990-11-29T00:00:00",
+
+        "telephones": [
+            {
+                "numRef": 1,
+                "categorie": "PRIVE",
+                "numero": "+41 32 123 45 67"
+            },
+            {
+                "numRef": 2,
+                "categorie": "PROFESSIONNEL",
+                "numero": "+41 12 345 67 89"
+            }
+        ],
+        "adresses": [
+            {
+                "numRef": 1,
+                "rue": "rue de pier 1",
+                "localite": "ville 1 de pier"
+            },
+            {
+                "numRef": 2,
+                "rue": "rue de pier 2",
+                "localite": "ville 2 de pier"
+            }
+        ]
+    },
+    {
+        "identifiant": {
+            "UUID": "12345678-1234-1234-1234-123456789012"
+        },
+        "nom": "pol",
+        "telephones": [
+            {
+                "numRef": 1,
+                "categorie": "PROFESSIONNEL",
+                "numero": "+41 12 345 67 89"
+            }
+        ],
+        "adresses": [
+            {
+                "numRef": 1,
+                "rue": "rue de pol 1",
+                "localite": "ville 1 de pol"
+            }
+        ]
+    },
+    {
+        "identifiant": {
+            "UUID": "12345678-1234-1234-1234-123456789012"
+        },
+        "nom": "jak",
+        "dateNaissance": "1960-01-29T00:00:00",
+        "telephones": [],
+        "adresses": []
+    },
+    {
+        "telephones": [],
+        "adresses": []
+    }
+]

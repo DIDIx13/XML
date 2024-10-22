@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    dominique huguenin (dominique.huguenin@rpn.ch)
+-->
+<?xml-stylesheet type="text/xsl" href= "campanule.xsl" ?>
+<client 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="campanule.xsd">
+    <identifiant>
+        <uuid>DEMO0000-0000-0000-0002-000000000008</uuid>
+        <version>0</version>
+    </identifiant>
+    <mouchard>
+        <dateCreation>2017-11-30T08:19:48.743Z</dateCreation>
+        <userCreation>testUser</userCreation>
+    </mouchard>
+    <nom>DECLERCQ</nom>
+    <prenom>Lucien</prenom>
+    <localite>BRUXELLES</localite>
+    <codePays>B</codePays>
+    <chiffreAffaire>349.00</chiffreAffaire>
+    <typeClient>GRAND_COMPTE</typeClient>
+</client>

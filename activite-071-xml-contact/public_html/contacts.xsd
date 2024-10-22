@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!--
+    dominique huguenin (dominique.huguenin@rpn.ch)
+-->
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:element name="contacts">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="contact" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="contact" type="typeContact"/>
+
+    <xs:complexType name="typeContact">
+        <xs:all>
+            <xs:element name="identifiant" type="typeIdentifiant" minOccurs="0"/>
+            <xs:element name="nom" type="xs:string" minOccurs="0"/>
+            <xs:element name="date-naissance" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="telephones">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="telephone" type="typeTelephone"
+                                    minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="adresses">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="adresse" type="typeAdresse"
+                                    minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="typeTelephone">
+        <xs:all>
+            <xs:element name="numRef" type="xs:integer"/>
+            <xs:element name="categorie" type="typeCategorie"/>
+            <xs:element name="numero" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+    
+    <xs:complexType name="typeAdresse">
+        <xs:all>
+            <xs:element name="numRef" type="xs:integer"/>
+            <xs:element name="rue" type="xs:string"/>
+            <xs:element name="localite" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="typeIdentifiant">
+        <xs:all>
+            <xs:element name="UUID" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+    
+    <xs:simpleType name="typeCategorie">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PRIVE"/>
+            <xs:enumeration value="PROFESSIONNEL"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

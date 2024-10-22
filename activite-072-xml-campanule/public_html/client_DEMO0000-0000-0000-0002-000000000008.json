@@ -1,0 +1,16 @@
+{
+    "identifiant": {
+        "uuid": "DEMO0000-0000-0000-0002-000000000008",
+        "version": 0
+    },
+    "nom": "DECLERCQ",
+    "prenom": "Lucien",
+    "codePays": "B",
+    "localite": "BRUXELLES",
+    "chiffreAffaire": 349,
+    "typeClient": "GRAND_COMPTE",
+    "mouchard": {
+        "dateCreation": "2017-11-30T08:19:48.743",
+        "userCreation": "testUser"
+    }
+}

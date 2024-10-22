@@ -1,0 +1,300 @@
+[
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0001-000000000001",
+            "version": 0
+        },
+        "nom": "AGRAFEUSE",
+        "poids": 150,
+        "couleur": "ROUGE",
+        "qteStock": 10,
+        "prixAchat": 20,
+        "prixVente": 29,
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0001-000000000002",
+            "version": 0
+        },
+        "nom": "CALCULATRICE",
+        "poids": 150,
+        "couleur": "NOIR",
+        "qteStock": 5,
+        "prixAchat": 200,
+        "prixVente": 235,
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0001-000000000003",
+            "version": 0
+        },
+        "nom": "CACHET DATEUR",
+        "poids": 100,
+        "couleur": "BLANC",
+        "qteStock": 3,
+        "prixAchat": 21,
+        "prixVente": 30,
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0001-000000000004",
+            "version": 0
+        },
+        "nom": "LAMPE",
+        "poids": 550,
+        "couleur": "ROUGE",
+        "qteStock": 3,
+        "prixAchat": 105,
+        "prixVente": 149,
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0001-000000000005",
+            "version": 0
+        },
+        "nom": "LAMPE",
+        "poids": 550,
+        "couleur": "BLANC",
+        "qteStock": 3,
+        "prixAchat": 100,
+        "prixVente": 149,
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0001-000000000006",
+            "version": 0
+        },
+        "nom": "LAMPE",
+        "poids": 550,
+        "couleur": "BLEU",
+        "qteStock": 3,
+        "prixAchat": 105,
+        "prixVente": 149,
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0001-000000000007",
+            "version": 0
+        },
+        "nom": "LAMPE",
+        "poids": 550,
+        "couleur": "VERT",
+        "qteStock": 3,
+        "prixAchat": 105,
+        "prixVente": 149,
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0001-000000000008",
+            "version": 0
+        },
+        "nom": "PESE-LETTRE1-500",
+        "qteStock": 2,
+        "prixAchat": 120,
+        "prixVente": 200,
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0001-000000000009",
+            "version": 0
+        },
+        "nom": "PESE-LETTRE1-1000",
+        "qteStock": 2,
+        "prixAchat": 150,
+        "prixVente": 250,
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0001-000000000010",
+            "version": 0
+        },
+        "nom": "PESE-LETTRE1-500",
+        "poids": 0,
+        "qteStock": 2,
+        "prixAchat": 120,
+        "prixVente": 200,
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0001-000000000011",
+            "version": 0
+        },
+        "nom": "PESE-LETTRE1-1000",
+        "poids": 0,
+        "qteStock": 2,
+        "prixAchat": 150,
+        "prixVente": 250,
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0001-000000000012",
+            "version": 0
+        },
+        "nom": "CRAYON",
+        "poids": 20,
+        "couleur": "ROUGE",
+        "qteStock": 210,
+        "prixAchat": 1,
+        "prixVente": 2,
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0001-000000000013",
+            "version": 0
+        },
+        "nom": "CRAYON",
+        "poids": 30,
+        "couleur": "BLEU",
+        "qteStock": 190,
+        "prixAchat": 1,
+        "prixVente": 2,
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0001-000000000014",
+            "version": 0
+        },
+        "nom": "CRAYON LUXE",
+        "poids": 20,
+        "couleur": "ROUGE",
+        "qteStock": 95,
+        "prixAchat": 3,
+        "prixVente": 5,
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0001-000000000015",
+            "version": 0
+        },
+        "nom": "CRAYON LUXE",
+        "poids": 20,
+        "couleur": "VERT",
+        "qteStock": 90,
+        "prixAchat": 3,
+        "prixVente": 5,
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0001-000000000016",
+            "version": 0
+        },
+        "nom": "CRAYON LUXE",
+        "poids": 20,
+        "couleur": "BLEU",
+        "qteStock": 80,
+        "prixAchat": 3,
+        "prixVente": 5,
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0001-000000000017",
+            "version": 0
+        },
+        "nom": "CRAYON LUXE",
+        "poids": 20,
+        "couleur": "NOIR",
+        "qteStock": 450,
+        "prixAchat": 3,
+        "prixVente": 5,
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0001-000000000018",
+            "version": 0
+        },
+        "nom": "COFFRET SIMPLE",
+        "poids": 300,
+        "couleur": "NOIR",
+        "qteStock": 20,
+        "prixAchat": 100,
+        "prixVente": 120,
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0001-000000000019",
+            "version": 0
+        },
+        "nom": "COFFRET LUXE",
+        "poids": 350,
+        "couleur": "BLEU",
+        "qteStock": 15,
+        "prixAchat": 150,
+        "prixVente": 180,
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    }
+]

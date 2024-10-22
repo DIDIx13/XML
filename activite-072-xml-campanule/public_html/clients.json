@@ -1,0 +1,258 @@
+[
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0002-000000000001",
+            "version": 0
+        },
+        "nom": "DEFRERE",
+        "prenom": "Marc",
+        "codePays": "F",
+        "localite": "PARIS",
+        "chiffreAffaire": 806,
+        "typeClient": "PARTICULIER",
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0002-000000000002",
+            "version": 0
+        },
+        "nom": "DECERF",
+        "prenom": "Jean",
+        "codePays": "F",
+        "localite": "PARIS",
+        "chiffreAffaire": 0,
+        "typeClient": "PARTICULIER",
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0002-000000000003",
+            "version": 0
+        },
+        "nom": "DEFAWE",
+        "prenom": "Leon",
+        "codePays": "B",
+        "localite": "LIEGE",
+        "chiffreAffaire": 0,
+        "typeClient": "PARTICULIER",
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0002-000000000004",
+            "version": 0
+        },
+        "nom": "NOSSENT",
+        "prenom": "Serge",
+        "codePays": "B",
+        "localite": "BRUXELLES",
+        "chiffreAffaire": 149,
+        "typeClient": "PARTICULIER",
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0002-000000000005",
+            "version": 0
+        },
+        "nom": "JACOB",
+        "prenom": "Marthe",
+        "codePays": "F",
+        "localite": "MARSEILLE",
+        "chiffreAffaire": 31,
+        "typeClient": "ADMINISTRATION",
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0002-000000000006",
+            "version": 0
+        },
+        "nom": "JAMAR",
+        "prenom": "Pierre",
+        "codePays": "B",
+        "localite": "LIEGE",
+        "chiffreAffaire": 21,
+        "typeClient": "ADMINISTRATION",
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0002-000000000007",
+            "version": 0
+        },
+        "nom": "DECKERS",
+        "prenom": "William",
+        "codePays": "F",
+        "localite": "LYON",
+        "chiffreAffaire": 140,
+        "typeClient": "GRAND_COMPTE",
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0002-000000000008",
+            "version": 0
+        },
+        "nom": "DECLERCQ",
+        "prenom": "Lucien",
+        "codePays": "B",
+        "localite": "BRUXELLES",
+        "chiffreAffaire": 349,
+        "typeClient": "GRAND_COMPTE",
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0002-000000000009",
+            "version": 0
+        },
+        "nom": "DEFYZ",
+        "prenom": "Maurice",
+        "codePays": "F",
+        "localite": "BORDEAUX",
+        "chiffreAffaire": 0,
+        "typeClient": "PARTICULIER",
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0002-000000000010",
+            "version": 0
+        },
+        "nom": "DEFOOZ",
+        "prenom": "Francis",
+        "codePays": "F",
+        "localite": "LILLE",
+        "chiffreAffaire": 60,
+        "typeClient": "PARTICULIER",
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0002-000000000011",
+            "version": 0
+        },
+        "nom": "RAMJOIE",
+        "prenom": "Victor",
+        "codePays": "F",
+        "localite": "NANTES",
+        "chiffreAffaire": 0,
+        "typeClient": "PARTICULIER",
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0002-000000000012",
+            "version": 0
+        },
+        "nom": "RENARDY",
+        "prenom": "Jean",
+        "codePays": "F",
+        "localite": "MARSEILLE",
+        "chiffreAffaire": 275,
+        "typeClient": "GRAND_COMPTE",
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0002-000000000013",
+            "version": 0
+        },
+        "nom": "MANTEAU",
+        "prenom": "Yvan",
+        "codePays": "F",
+        "localite": "PARIS",
+        "chiffreAffaire": 320,
+        "typeClient": "GRAND_COMPTE",
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0002-000000000014",
+            "version": 0
+        },
+        "nom": "JONAS",
+        "prenom": "Henri",
+        "codePays": "F",
+        "localite": "PARIS",
+        "chiffreAffaire": 0,
+        "typeClient": "PME",
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0002-000000000015",
+            "version": 0
+        },
+        "nom": "DELVENNE",
+        "prenom": "Christian",
+        "codePays": "F",
+        "localite": "LYON",
+        "chiffreAffaire": 0,
+        "typeClient": "GRAND_COMPTE",
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    },
+    {
+        "identifiant": {
+            "uuid": "DEMO0000-0000-0000-0002-000000000016",
+            "version": 0
+        },
+        "nom": "DEFEEZ",
+        "prenom": "Andre",
+        "codePays": "F",
+        "localite": "LYON",
+        "chiffreAffaire": 0,
+        "typeClient": "PARTICULIER",
+        "mouchard": {
+            "dateCreation": "2017-11-30T08:19:48.743",
+            "userCreation": "testUser"
+        }
+    }
+]

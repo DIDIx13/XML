@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<!--
+    dominique huguenin (dominique.huguenin@rpn.ch)
+-->
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:element name="articles">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="article" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="article" type="typeArticle"/>
+
+    <xs:complexType name="typeArticle">
+        <xs:all>
+            <xs:element name="identifiant" type="typeIdentifiant" minOccurs="0"/>
+            <xs:element name="nom" type="xs:string" minOccurs="0"/>
+            <xs:element name="poids" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="couleur" type="xs:string" minOccurs="0"/>
+            <xs:element name="qteStock" type="xs:integer" minOccurs="0"/>
+            <xs:element name="prixAchat" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="prixVente" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="mouchard" type="typeMouchard" minOccurs="0"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:element name="clients">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="client" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="client" type="typeClient"/>
+
+    <xs:complexType name="typeClient">
+        <xs:all>
+            <xs:element name="identifiant" type="typeIdentifiant" minOccurs="0"/>
+            <xs:element name="nom" type="xs:string" minOccurs="0"/>
+            <xs:element name="prenom" type="xs:string" minOccurs="0"/>
+            <xs:element name="localite" type="xs:string" minOccurs="0"/>
+            <xs:element name="chiffreAffaire" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="typeClient" type="typeClientEnum" minOccurs="0"/>
+            <xs:element name="codePays" type="xs:string" minOccurs="0"/>
+            <xs:element name="mouchard" type="typeMouchard" minOccurs="0"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:element name="commandes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="commande" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="commande" type="typeCommande"/>
+
+    <xs:complexType name="typeCommande">
+        <xs:all>
+            <xs:element name="identifiant" type="typeIdentifiant" minOccurs="0"/>
+            <xs:element ref="client" minOccurs="0"/>
+            <xs:element name="dateCommande" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="mouchard" type="typeMouchard" minOccurs="0"/>
+            <xs:element name="lignes" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="item" type="typeLigne" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="typeLigne">
+        <xs:all>
+            <xs:element ref="article"/>
+            <xs:element name="qteCommandee" type="xs:integer" minOccurs="0"/>
+            <xs:element name="prixVenteReel" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="qteTotaleLivree" type="xs:integer" minOccurs="0"/>
+            <xs:element name="dateLivraisonPrevue" type="xs:dateTime" minOccurs="0"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="typeIdentifiant">
+        <xs:all>
+            <xs:element name="uuid" type="xs:string"/>
+            <xs:element name="version" type="xs:integer"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="typeMouchard">
+        <xs:all>
+            <xs:element name="dateCreation" type="xs:dateTime"/>
+            <xs:element name="userCreation" type="xs:string"  minOccurs="0"/>
+            <xs:element name="dateModification" type="xs:dateTime"  minOccurs="0"/>
+            <xs:element name="userModification" type="xs:string"  minOccurs="0"/>
+            <xs:element name="dateSuppression" type="xs:dateTime"  minOccurs="0"/>
+            <xs:element name="userSuppression" type="xs:string"  minOccurs="0"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:simpleType name="typeClientEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PARTICULIER"/>
+            <xs:enumeration value="GRAND_COMPTE"/>
+            <xs:enumeration value="ADMINISTRATION"/>
+            <xs:enumeration value="PME"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

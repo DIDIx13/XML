@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="activite-071-xml-contact" basedir="." default="dist-src">
+    <target name="clean">
+        <delete file="${ant.project.name}.zip" quiet="true" />
+    </target>
+
+
+    <target name="dist-src"
+            description="Crée un archive pour la distribution des sources"
+            depends="clean" >
+        <echo>${ant.project.name}</echo>
+
+        <mkdir dir="${ant.project.name}"/>
+
+        <copy todir="${ant.project.name}">
+            <fileset dir="${basedir}">
+                <include name="**" />
+                <exclude name="${ant.project.name}" />
+            </fileset>
+        </copy>
+
+        <zip destfile="${ant.project.name}.zip">
+            <fileset dir="${basedir}">
+                <include name="${ant.project.name}/" />
+            </fileset>
+        </zip>
+
+        <delete dir="${ant.project.name}"/>
+    </target>
+
+</project>

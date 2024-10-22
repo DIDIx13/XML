@@ -1,0 +1,14 @@
+{
+    "identifiant": {
+        "uuid": "DEMO0000-0000-0000-0001-000000000009",
+        "version": 0
+    },
+    "nom": "PESE-LETTRE1-1000",
+    "qteStock": 2,
+    "prixAchat": 150,
+    "prixVente": 250,
+    "mouchard": {
+        "dateCreation": "2017-11-30T08:19:48.743",
+        "userCreation": "testUser"
+    }
+}
