@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"><script/>
+	<!-- un entier entre 1 et 10 -->
+	<xs:simpleType name="entierLimite">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="[+-]?([1-9][0-9]*|0)*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- etc...-->
+	<xs:element name="Serie0203">
+		<xs:complexType>
+			<xs:sequence>
+				<!-- Si on veut faire plus exemple de test on ajoute maxOccurs="unbounded".-->
+				<xs:element name="question1" type="entierLimite" maxOccurs="unbounded"/>
+				<!-- etc...-->
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
