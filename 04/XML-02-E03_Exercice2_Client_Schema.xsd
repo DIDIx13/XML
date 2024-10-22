@@ -64,7 +64,7 @@ Exemple de schéma pour l'exemple 2 avec client pour l'exercice 2 de XML-02-E03 
             <xsd:maxLength value="40"/>
         </xsd:restriction>
     </xsd:simpleType>
-    <!-- 8. Création d'un type npa pour la suisste-->
+    <!-- 8. Création d'un type npa pour la Suisse-->
     <xsd:simpleType name="typeNpa">
         <xsd:restriction base="xsd:short">
             <xsd:minInclusive value="1000"/>
@@ -124,7 +124,7 @@ Remplacer l'élément numero par numeroEntree et numeroCommande pour éviter tou
 Renommer l'élément type par typeAdresse, afin d'être plus facilement compréhensilbe car il y a plusieurs "type" dans la structure XML (type d'adresse et type de produit
 -->
     <!--
-Changement de typeAdresse en genreAdresse qui est plus judicieux par rapport au nnom des types simples personnalisés 
+Changement de typeAdresse en genreAdresse qui est plus judicieux par rapport au nom des types simples personnalisés 
 -->
     <xsd:attribute name="genreAdresse" type="typeAdresse"/>
     <xsd:element name="dateCommande" type="xsd:date"/>
