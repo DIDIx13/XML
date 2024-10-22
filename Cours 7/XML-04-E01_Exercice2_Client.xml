@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Exemple 1 avec client et le schéma XSD associé qui a été défini pour l'exercice 2 de XML-02-E05 et utilisé dans le cadre de l'exercice 2 de XML-04-S01-->
+<entreprise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XML-04-E01_Exercice2_Client_Schema.xsd"><script/>
+	<clients>
+		<client>
+			<numeroClient>Cli124428</numeroClient>
+			<nom>DupondDupondDupondDupondDupond</nom>
+			<prenom>Charles</prenom>
+			<remarque>Client particulier</remarque>
+			<adresses>
+				<adresse genreAdresse="Livraison">
+					<rue>Rue de la Gare</rue>
+					<numeroEntree>128</numeroEntree>
+					<npa>2000</npa>
+					<ville>Neuchâtel</ville>
+				</adresse>
+				<adresse genreAdresse="Facturation">
+					<rue>Grand Rue</rue>
+					<numeroEntree>14</numeroEntree>
+					<npa>2114</npa>
+					<ville>Fleurier</ville>
+				</adresse>
+			</adresses>
+			<commandes>
+				<commande>
+					<numeroCommande>Com2</numeroCommande>
+					<dateCommande>2021-02-21</dateCommande>
+					<montantTotal>195.00</montantTotal>
+					<lignes>
+						<ligne>
+							<numeroLigne>1</numeroLigne>
+							<quantite>100</quantite>
+							<ligneProd>Prod284551</ligneProd>
+						</ligne>
+						<ligne>
+							<numeroLigne>2</numeroLigne>
+							<quantite>10</quantite>
+							<ligneProd>Prod384331</ligneProd>
+						</ligne>
+					</lignes>
+				</commande>
+			</commandes>
+		</client>
+		<client>
+			<numeroClient>Cli334424999</numeroClient>
+			<nom>Jaccard</nom>
+			<prenom>Annette</prenom>
+			<remarque>Client commercial</remarque>
+			<adresses>
+				<adresse genreAdresse="Livraison">
+					<rue>Rue de la Fontaine</rue>
+					<numeroEntree>18</numeroEntree>
+					<npa>2108</npa>
+					<ville>Couvet</ville>
+				</adresse>
+				<adresse genreAdresse="Facturation">
+					<rue>Rue des Moulins</rue>
+					<numeroEntree>24</numeroEntree>
+					<npa>2000</npa>
+					<ville>Neuchâtel</ville>
+				</adresse>
+			</adresses>
+			<commandes>
+				<commande>
+					<numeroCommande>Com1</numeroCommande>
+					<dateCommande>2021-02-19</dateCommande>
+					<montantTotal>900.00</montantTotal>
+					<lignes>
+						<ligne>
+							<numeroLigne>1</numeroLigne>
+							<quantite>100</quantite>
+							<ligneProd>Prod384332</ligneProd>
+						</ligne>
+						<ligne>
+							<numeroLigne>2</numeroLigne>
+							<quantite>10</quantite>
+							<ligneProd>Prod284551</ligneProd>
+						</ligne>
+					</lignes>
+				</commande>
+			</commandes>
+		</client>
+	</clients>
+	<produits>
+		<produit genreProduit="Nettoyage">
+			<numeroProduit>Prod284551</numeroProduit>
+			<nomProduit>Sipuro</nomProduit>
+			<prixUnitaire>1.50</prixUnitaire>
+		</produit>
+		<produit genreProduit="Alimentaire">
+			<numeroProduit>Prod384551</numeroProduit>
+			<nomProduit>Riz</nomProduit>
+			<prixUnitaire>4.50</prixUnitaire>
+		</produit>
+		<produit genreProduit="Bureau">
+			<numeroProduit>Prod384331</numeroProduit>
+			<nomProduit>Papier A4 bloc 500</nomProduit>
+			<prixUnitaire>7.50</prixUnitaire>
+		</produit>
+		<produit genreProduit="Bureau">
+			<numeroProduit>Prod384332</numeroProduit>
+			<nomProduit>Paquet de 20 stylos</nomProduit>
+			<prixUnitaire>15.00</prixUnitaire>
+		</produit>
+	</produits>
+</entreprise>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Exemple de transformation HTML de l'arbre généaloqiue de l'exercice 1 poiknt 1 de XML-04-S01-->
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"><script/>
+	<xsl:output method="html"/>
+	<xsl:template match="/">
+		<html>
+			<head>
+				<title>Arbre généaloqiue familial</title>
+			</head>
+			<body>
+				<h2>Famille</h2>
+				<p>Ci-dessous est montré le tableau des grands-parents de leurs descendants</p>
+				<table border="1px" bordercolor="black">
+					<tbody>
+						<tr>
+							<th>Nom</th>
+							<th>Prénom</th>
+							<th>Age</th>
+							<th>Descendants</th>
+						</tr>
+						<xsl:apply-templates select="famille/grandParent"/>
+					</tbody>
+				</table>
+				<br/>
+			</body>
+		</html>
+	</xsl:template>
+	<xsl:template match="famille/grandParent">
+		<xsl:apply-templates select="personne">
+			<xsl:sort select="nom"/>
+			<xsl:sort select="prenom"/>
+		</xsl:apply-templates>
+		<xsl:apply-templates select="descendants/parents"/>
+	</xsl:template>
+	<xsl:template match="descendants/parents">
+		<xsl:apply-templates select="personne">
+			<xsl:sort select="nom"/>
+			<xsl:sort select="prenom"/>
+		</xsl:apply-templates>
+		<xsl:apply-templates select="descendants/enfant"/>
+	</xsl:template>
+	<xsl:template match="descendants/enfant">
+		<xsl:apply-templates select="personne">
+			<xsl:sort select="nom"/>
+			<xsl:sort select="prenom"/>
+		</xsl:apply-templates>
+	</xsl:template>
+	<xsl:template match="personne">
+		<tr>
+			<td>
+				<xsl:value-of select="nom"/>
+			</td>
+			<td>
+				<xsl:value-of select="prenom"/>
+			</td>
+			<td>
+				<xsl:value-of select="age"/>
+			</td>
+			<td>
+				<xsl:value-of select="../descendants/@niveau"/>
+			</td>
+		</tr>
+	</xsl:template>
+</xsl:stylesheet>

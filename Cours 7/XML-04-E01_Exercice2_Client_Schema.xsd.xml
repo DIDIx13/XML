@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Exemple de schéma pour l'exemple 2 avec client pour l'exercice 2 de XML-02-E05 et commentaires du choix des types en classe.-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"><script/>
+
+<!--Création des types simples personnalités-->
+
+	<!-- 1. Créationd d'un type tyoeNomPre afin de pouvoir saisir un nom et prénom d'une longueur de 30 caractères-->
+<!--	<xsd:simpleType name="tyoeNomPre">
+		<xsd:restriction base="xsd:token">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="30"/>
+		</xsd:restriction>
+	</xsd:simpleType>-->
+
+	<xsd:simpleType name="tyoeNomPre">
+		<xsd:restriction base="xsd:token">
+<!--			<xsd:pattern value=".{1,30}"/>-->
+<!--Autre possibilité: en limitant le choix des caractère-->
+			<xsd:pattern value="[A-Za-zàâäéèêëîïôöùûü\-']{1,30}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	
+	<!-- 2. Création d'un type adresse permettant de choisir le genre d'adresse entre Livraison ou Facturation-->
+<!--	<xsd:simpleType name="typeAdresse">
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="Livraison"/>
+			<xsd:enumeration value="Facturation"/>
+		</xsd:restriction>
+	</xsd:simpleType>-->
+
+	<xsd:simpleType name="typeGenreAdresse">
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:pattern value="(Livraison|Facturation)"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- 3. Création d'un type de produits permettant de choisir le genre de produits-->	<xsd:simpleType name="typeGenreProduit">
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="Bureau"/>
+			<xsd:enumeration value="Alimentaire"/>
+			<xsd:enumeration value="Nettoyage"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- 4. Créationd d'un type tyoeMontant afin de pouvoir saisir des montants avec deux décimales-->
+	<xsd:simpleType name="typeMontant">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- 5. Création d'un type identifiant d'une longueur maximale de 12 caractères-->
+	<xsd:simpleType name="typeID">
+		<xsd:restriction base="xsd:ID">
+			<xsd:maxLength value="12"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!-- 6. Création d'un type référence d'une longueur de 12 caractères-->
+	<xsd:simpleType name="typeIDRef">
+		<xsd:restriction base="xsd:IDREF">
+			<xsd:maxLength value="12"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!--Afin d'éviter que l'on saisisse n'importe quel ID pour client, commande et produit-->
+	<!-- 5a. Création d'un type identifiant pour client d'une longueur maximale de 12 caractères-->
+	<xsd:simpleType name="typeIDCli">
+		<xsd:restriction base="typeID">
+			<xsd:pattern value="Cli[0-9]*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!-- 5b. Création d'un type identifiant pour commande d'une longueur maximale de 12 caractères-->
+	<xsd:simpleType name="typeIDComm">
+		<xsd:restriction base="typeID">
+			<xsd:pattern value="Com[0-9]*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- 5c. Création d'un type identifiant pour produit d'une longueur maximale de 12 caractères-->
+	<xsd:simpleType name="typeIDProd">
+		<xsd:restriction base="typeID">
+			<xsd:pattern value="Prod[0-9]*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- 6c. Création d'un type référence pour l'identifiant d'un produit-->
+	<xsd:simpleType name="typeIDRefProd">
+		<xsd:restriction base="typeIDRef">
+			<xsd:pattern value="Prod[0-9]*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+	<!-- 3. Création d'un type typeRueVille afin de saisir une rue ou une ville d'une longueur maximale de 40 caractères-->
+	<xsd:simpleType name="typeRueVille">
+		<xsd:restriction base="xsd:token">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="40"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- 8. Création d'un type npa pour la suisste-->
+	<xsd:simpleType name="typeNpa">
+		<xsd:restriction base="xsd:short">
+			<xsd:minInclusive value="1000"/>
+			<xsd:maxInclusive value="9999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!-- 9. Création d'un type numéro pour les entrées de maison-->
+	<xsd:simpleType name="typeEntree">
+		<xsd:restriction base="xsd:short">
+			<xsd:minInclusive value="1"/>
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- 10. Création d'un type pour les numéros de lignes-->
+	<xsd:simpleType name="typeNoLigne">
+		<xsd:restriction base="xsd:short">
+			<xsd:minInclusive value="1"/>
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- 11. Création d'un type pour le nombre de quantitié-->
+	<xsd:simpleType name="typeQte">
+		<xsd:restriction base="xsd:short">
+			<xsd:minInclusive value="1"/>
+			<xsd:maxInclusive value="9999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- 12. Créationd d'un type tyoeNomProd afin de pouvoir saisir des nom de produit de 50 caractères au maximum-->
+	<xsd:simpleType name="typeNomProd">
+		<xsd:restriction base="xsd:token">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+<!-- Déclaration des types complexes -->
+
+		<xsd:complexType name="typeAdresse">
+			<xsd:sequence>
+				<xsd:element ref="rue"/>
+				<xsd:element ref="numeroEntree"/>
+				<xsd:element ref="npa"/>
+				<xsd:element ref="ville"/>
+			</xsd:sequence>
+			<xsd:attribute ref="genreAdresse" use="required"/>
+		</xsd:complexType>
+
+		<xsd:complexType name="typeAdresses">
+			<xsd:sequence>
+				<xsd:element ref="adresse" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+
+		<xsd:complexType name="typeLigne">
+			<xsd:sequence>
+				<xsd:element ref="numeroLigne"/>
+				<xsd:element ref="quantite"/>
+				<xsd:element ref="ligneProd"/>
+			</xsd:sequence>
+		</xsd:complexType>
+
+		<xsd:complexType name="typeLignes">
+			<xsd:sequence>
+				<xsd:element ref="ligne" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+
+		<xsd:complexType name="typeCommande">
+			<xsd:sequence>
+				<xsd:element ref="numeroCommande"/>
+				<xsd:element ref="dateCommande"/>
+				<xsd:element ref="montantTotal"/>
+				<xsd:element ref="lignes"/>
+			</xsd:sequence>
+		</xsd:complexType>
+
+		<xsd:complexType name="typeCommandes">
+			<xsd:sequence>
+				<xsd:element ref="commande"/>
+			</xsd:sequence>
+		</xsd:complexType>
+
+		<xsd:complexType name="typeClient">
+			<xsd:sequence>
+				<xsd:element ref="numeroClient"/>
+				<xsd:element ref="nom"/>
+				<xsd:element ref="prenom"/>
+				<xsd:element ref="remarque"/>
+				<xsd:element ref="adresses"/>
+				<xsd:element ref="commandes"/>
+			</xsd:sequence>
+		</xsd:complexType>
+
+		<xsd:complexType name="typeClients">
+			<xsd:sequence>
+				<xsd:element ref="client" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+
+		<xsd:complexType name="typeProduit">
+			<xsd:sequence>
+				<xsd:element ref="numeroProduit"/>
+				<xsd:element ref="nomProduit"/>
+				<xsd:element ref="prixUnitaire"/>
+			</xsd:sequence>
+			<xsd:attribute ref="genreProduit" use="required"/>
+		</xsd:complexType>
+
+		<xsd:complexType name="typeProduits">
+			<xsd:sequence>
+				<xsd:element ref="produit" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+
+		<xsd:complexType name="typeEntreprise">
+			<xsd:sequence>
+				<xsd:element ref="clients"/>
+				<xsd:element ref="produits"/>
+			</xsd:sequence>
+		</xsd:complexType>
+
+	<!-- Création des attributs et des éléments simples en leurs attribuant le type de données adéquats-->
+	
+	<xsd:element name="numeroClient" type="typeIDCli"/>
+	<xsd:element name="nom" type="tyoeNomPre"/>
+	<xsd:element name="prenom" type="tyoeNomPre"/>
+	<xsd:element name="remarque" type="xsd:token"/>
+	<xsd:element name="rue" type="typeRueVille"/>
+
+	<!--Remplacer l'élément numero par numeroEntree et numeroCommande pour éviter toute confusion de compréhension-->
+	<xsd:element name="numeroEntree" type="typeEntree"/>
+	<xsd:element name="numeroCommande" type="typeIDComm"/>
+	
+	<xsd:element name="npa" type="typeNpa"/>
+	<xsd:element name="ville" type="typeRueVille"/>
+
+	<!--Renommer l'élément type par typeAdresse, afin d'être plus facilement compréhensilbe car il y a plusieurs "type" dans la structure XML (type d'adresse et type de produit-->
+	<!--Changement de typeAdresse en genreAdresse qui est plus judicieux par rapport au nnom des types simples personnalisés -->
+	<xsd:attribute name="genreAdresse" type="typeGenreAdresse"/>
+	<xsd:element name="dateCommande" type="xsd:date"/>
+	<xsd:element name="montantTotal" type="typeMontant"/>
+	
+	<!-- changer numeroReference en numeroLigne, car plus explicite-->
+	<xsd:element name="numeroLigne" type="typeNoLigne"/>
+	
+	<xsd:element name="quantite" type="typeQte"/>
+	<xsd:element name="ligneProd" type="typeIDRefProd"/>
+	<xsd:element name="numeroProduit" type="typeIDProd"/>
+	<xsd:element name="nomProduit" type="typeNomProd"/>
+	<xsd:element name="prixUnitaire" type="typeMontant"/>
+	<!--Renommer l'attribut typeProduit en genreProduit pour éviter toute confusion avec typeProduit--> 
+	<xsd:attribute name="genreProduit" type="typeGenreProduit"/>
+
+<!-- Affectation des types complexes aux éléments correspondants-->
+	<xsd:element name="adresse" type="typeAdresse"/>
+	<xsd:element name="adresses" type="typeAdresses"/>
+	<xsd:element name="ligne" type="typeLigne"/>
+	<xsd:element name="lignes" type="typeLignes"/>
+	<xsd:element name="commande" type="typeCommande"/>
+	<xsd:element name="commandes" type="typeCommandes"/>
+	<xsd:element name="client" type="typeClient"/>
+	<xsd:element name="clients" type="typeClients"/>
+	<xsd:element name="produit" type="typeProduit"/>
+	<xsd:element name="produits" type="typeProduits"/>
+	<xsd:element name="entreprise" type="typeEntreprise"/>
+</xsd:schema>

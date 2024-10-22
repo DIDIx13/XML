@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Exemple de transformation HTML de la gestion des clients avec leurs commandes et produits, de l'exercice 2 de XML-04-S01-->
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"><script/>
+	<xsl:output method="html"/>
+	<xsl:template match="/">
+		<html>
+			<head>
+				<title>La gestion des clients avec leurs commandes et produits</title>
+			</head>
+			<body>
+				<h2>La gestion des clients avec leurs commandes et produits</h2>
+				<p> Ci-dessous est montré le tableau de la liste de tous les produits</p>
+				<table border="1px" bordercolor="black">
+					<tbody>
+						<tr>
+							<th>Genre de produit</th>
+							<th>Numéro de produit</th>
+							<th>Description</th>
+							<th>Prix unitaire</th>
+						</tr>
+						<xsl:apply-templates select="entreprise/produits/produit">
+							<xsl:sort select="@genreProduit"/>
+							<xsl:sort select="numeroProduit"/>
+						</xsl:apply-templates>
+					</tbody>
+				</table>
+				<br/>
+			</body>
+		</html>
+	</xsl:template>
+	<xsl:template match="entreprise/produits/produit">
+		<tr>
+			<td>
+				<xsl:value-of select="@genreProduit"/>
+			</td>
+			<td>
+				<xsl:value-of select="numeroProduit"/>
+			</td>
+			<td>
+				<xsl:value-of select="nomProduit"/>
+			</td>
+			<td>
+				<xsl:value-of select="prixUnitaire"/>
+			</td>
+		</tr>
+	</xsl:template>
+</xsl:stylesheet>
