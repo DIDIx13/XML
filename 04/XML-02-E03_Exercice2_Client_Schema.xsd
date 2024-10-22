@@ -4,9 +4,9 @@ Exemple de schéma pour l'exemple 2 avec client pour l'exercice 2 de XML-02-E03 
 <xsd:schema>
     <!--Création des types simples personnalités-->
     <!--
- 1. Créationd d'un type tyoeNomPre afin de pouvoir saisir un nom et prénom d'une longueur de 30 caractères
+ 1. Création d'un type typeNomPre afin de pouvoir saisir un nom et prénom d'une longueur de 30 caractères
 -->
-    <xsd:simpleType name="tyoeNomPre">
+    <xsd:simpleType name="typeNomPre">
         <xsd:restriction base="xsd:token">
             <xsd:minLength value="1"/>
             <xsd:maxLength value="30"/>
